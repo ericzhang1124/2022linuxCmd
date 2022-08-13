@@ -76,3 +76,30 @@ find ~ -type f -empty
 # 查找空目录&空文件
 find ~ -empty
 ```
+
+# grep
+
+```
+# 在指定目录查询包含指定字符（支持正则表达）的文件
+
+grep -r "END" ~/Desktop # 在Desktop目录下查询含有“END”字符串的文件
+
+
+grep -rni "Customer" . # 在当前目录下查询含有“Customer”字符串的文件，-rni，r：查询目录需要，n:显示所在文件的行号，i:忽略大小写
+
+
+grep -rni -A 1 -B 2 "customer980" ./Desktop # 在Desktop目录下查询含有customer980字符串的文件，输出此行且输出该行的前两行和后一行
+
+grep "customer980" # 查找含有customer980的文件
+```
+
+# 其他有用命令
+
+history
+```
+history # 打印最近执行命令
+
+!100 # 根据打印的命令输入序号，将历史命令复制到命令输入区
+```
+
+
