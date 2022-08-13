@@ -172,10 +172,31 @@ no info
 
 Search and Replace
 ```
+# 尾行模式 "/string" 
+/age # 当前文件搜索age
+n # next
+N # 上一个
+
+
+# 提换
+:%s/age/AGES/gc #将当前文件搜索到的age提换为AGES，g：全局， c:用户确认
+
+:%s/age/AGES/g # 没有c即表示不需要确认，直接自动将所有的age提换为AGES
 
 ```
 
+# 创建文件
 
+# .vimrc
+
+用户根目录下的.vimrc用于对vim进行初始化配置，如设置行号显示、语法高亮、语法对应颜色
+
+我的简单配置
+```
+:set number // 显示行号
+:syntax on // 语法高亮
+hi comment ctermfg =darkyellow // 语法高亮注释字体颜色修改
+```
 
 小插曲：vim注释的蓝色字体看不清楚如何解决
 [见这里](https://blog.csdn.net/weixin_30256901/article/details/99657016)
@@ -184,5 +205,3 @@ Search and Replace
 vi ~/.vimrc 加入如下内容
 hi comment ctermfg =darkyellow
 ```
-
-
